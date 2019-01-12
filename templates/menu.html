@@ -1,0 +1,93 @@
+<html>
+<body>
+
+	<h1>{{restaurant.name}}</h1>
+
+	<a href="#">Create new menu item</a><br><br>
+
+	{% if items %}
+
+		<h2>Appetizers</h2>
+
+		{% for item in items %}
+
+			{% if item.course == 'Appetizer' %}
+
+				{{item.name}}
+				{{item.price}}<br>
+				{{item.description}}<br>
+
+				<a href="#">Edit</a>
+
+				<a href="#">Delete</a><br><br>
+			
+			{% endif %}
+		{% endfor %}
+
+	<br><br>
+
+		<h2>Entrees</h2>
+
+		{% for item in items %}
+
+			{% if item.course == 'Entree' %}
+
+				{{item.name}}
+				{{item.price}}<br>
+				{{item.description}}<br>
+
+				<a href="#">Edit</a>
+
+				<a href="#">Delete</a><br><br>
+			
+			{% endif %}
+		{% endfor %}
+
+		</br></br>
+
+		<h2>Desserts</h2>
+
+		{% for item in items %}
+
+			{% if item.course == 'Dessert' %}
+
+				{{item.name}}
+				{{item.price}}</br>
+				{{item.description}}</br>
+
+				<a href="#">Edit</a>
+
+				<a href="#">Delete</a></br></br>
+			
+			{% endif %}
+		{% endfor %}
+
+		</br></br>
+
+		<h2>Beverages</h2>
+
+		{% for item in items %}
+
+			{% if item.course == 'Beverage' %}
+
+				{{item.name}}
+				{{item.price}}</br>
+				{{item.description}}</br>
+
+				<a href="#">Edit</a>
+
+				<a href="#">Delete</a></br></br>
+			
+			{% endif %}
+		{% endfor %}
+
+		</br></br>
+
+	{% else %}
+
+		<p>The menu is empty! Add a new item.</p>
+
+	{% endif %}
+
+</body>
+</html>
