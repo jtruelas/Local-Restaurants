@@ -1,0 +1,32 @@
+<html>
+<body>
+
+	<h1>Edit menu item</h1>
+
+	<form action='#' method='POST'>
+
+		<p>Name:</p>
+		<input type="text" name="name" placeholder="{{item.name}}" required>
+
+		<p>Description:</p>
+		
+		<textarea rows="3" cols="80" name="description" placeholder="{{item.description}}" required></textarea>
+
+		<p>Price:</p>
+		<input type="text" name="price" placeholder="{{item.price}}" required>
+
+		<p>Course:</p>
+		<input type="checkbox" name="course1" value="appetizers"> Appetizer
+		<br>
+		<input type="checkbox" name="course2" value="entrees"> Entree
+		<br>
+		<input type="checkbox" name="course3" value="desserts"> Dessert
+		<br>
+		<input type="checkbox" name="course4" value="beverages"> Beverage
+
+		<br><br>
+		<input type="submit" name="Create"><br>
+		<a href="#">Cancel</a>
+
+</body>
+</html>
