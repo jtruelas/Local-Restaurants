@@ -5,18 +5,18 @@
 
 	<div>
 
-	<form action=# method='POST'>
+	<form action="{{url_for('newRestaurant')}}" method='POST'>
 
 		<p>Name:</p>
 
-		<input type="text"  name="name">
+		<input type="text"  name="name" required>
 
 		<input type="submit" name="Create">
 	
 	</form>
 	</div>
 
-	<a href="#">Cancel</a>
+	<a href="{{url_for('showRestaurants')}}">Cancel</a>
 
 </body>
 </html>
