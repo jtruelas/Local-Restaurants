@@ -3,7 +3,7 @@
 
 	<h1>Create a new item</h1>
 
-	<form action='#' method='POST'>
+	<form action="{{url_for('newMenuItem', restaurant_id=restaurant.id)}}" method='POST'>
 
 		<p>Name:</p>
 		<input type="text" name="name" required>
@@ -16,17 +16,17 @@
 		<input type="text" name="price" placeholder="$0.00" required>
 
 		<p>Course:</p>
-		<input type="checkbox" name="course1" value="appetizers"> Appetizer
+		<input type="checkbox" name="course" value="Appetizer"> Appetizer
 		<br>
-		<input type="checkbox" name="course2" value="entrees"> Entree
+		<input type="checkbox" name="course" value="Entree"> Entree
 		<br>
-		<input type="checkbox" name="course3" value="desserts"> Dessert
+		<input type="checkbox" name="course" value="Dessert"> Dessert
 		<br>
-		<input type="checkbox" name="course4" value="beverages"> Beverage
+		<input type="checkbox" name="course" value="Beverage"> Beverage
 
 		<br><br>
 		<input type="submit" name="Create"><br>
-		<a href="#">Cancel</a>
+		<a href="{{url_for('showMenu', restaurant_id=restaurant.id)}}">Cancel</a>
 
 </body>
 </html>
