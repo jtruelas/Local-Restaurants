@@ -3,9 +3,19 @@
 
 	<h1>Local Restaurants</h1>
 
+	{% with messages = get_flashed_messages() %}
+		{% if messages %}
+			<ul>
+				{% for message in messages %}
+				<li><strong>{{message}}</strong></li>
+				{% endfor %}
+			</ul>
+		{% endif %}
+	{% endwith %}<br>
+
 	<div>
 		<a href="{{url_for('newRestaurant')}}">Create a new restaurant</a>
-	</div>
+	</div><br><br>
 
 	<div>
 
